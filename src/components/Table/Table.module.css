@@ -1,0 +1,18 @@
+.table {
+    border-spacing: 0;
+}
+.table tr {
+    background: var(--main-color);
+}
+.table tr:first-child {
+    font-weight: 700;
+}
+.table tr:nth-child(even) {
+    background: transparent;
+}
+.table td {
+    padding: 10px;
+}
+.tbody td {
+
+}

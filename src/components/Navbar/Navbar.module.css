@@ -1,0 +1,12 @@
+.navbar {
+    background: var(--navbar-color);
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+.link {
+    color: var(--light-text);
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+}
