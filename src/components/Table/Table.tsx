@@ -17,7 +17,7 @@ const Table: FC<TableProps> = ({users}) => {
                 <td>Страна</td>
             </tr>
             {
-                users.map(el =>
+                users.filter(el => el.show).map(el =>
                     <tr key={el.id}>
                         <td>{el.first_name}</td>
                         <td>{el.last_name}</td>

@@ -10,7 +10,7 @@ const CardList: FC<CardListProps> = ({users}) => {
     return (
         <div className={s.list}>
             {
-                users.map(el =>
+                users.filter(el => el.show).map(el =>
                     <CardItem user={el} key={el.id}/>
                 )
             }

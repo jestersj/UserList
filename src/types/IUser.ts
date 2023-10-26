@@ -8,4 +8,5 @@ export interface IUser {
     gender: string
     job: string
     profile_picture: string
+    show: boolean
 }
