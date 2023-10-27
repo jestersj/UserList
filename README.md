@@ -1,46 +1,33 @@
-# Getting Started with Create React App
+# Приложения для отображения списка пользователей в разных форматах
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Стек
+Приложение написано на TypeScript и React
 
-## Available Scripts
+Для роутинга использован React Router DOM
 
-In the project directory, you can run:
+Для http запросов Axios
 
-### `npm start`
+В качестве state manager Redux (однако в процессе я понял,
+что его использование может быть излишним, но убирать
+все-таки не стал)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Комметарии к решению
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Добавление флага "show" к пользователям сделано для того, 
+чтобы поиск не изменял состав массив пользователей, и таким образом,
+взаимодействие использование поиска не изменяло сортировку
+2. При поиске флаг "show" становится false, если пользователь не
+подходит под критерии поиска
+3. В каждом формате отображения пользователей массив фильтруется,
+чтобы оставить только пользователей, подходящих под 
+поиск (подсчет количества найденных пользователей находится так же)
+4. useMemo и useCallback не использовались сознательно по причине того,
+что затраты ресурсов на их использование выше той выгоды, которую
+они могут дать
+5. Формат группировки выполнен по странам
+6. В коде также есть дополнительные комментарии по сортировке и поиску.
+Функции поиска и сортировки находятся в файле UserPage.tsx
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## P.S.
+Прошу не судить строго мое использование TypeScript, 
+признаю недостаток опыта в нем. Решил заодно попрактиковаться, выполняя задание

@@ -1,6 +1,6 @@
 import React, {FC} from 'react';
 import {IUser} from "../../../types/IUser";
-import s from './CardItem.module.css'
+import s from './CardItem.module.css';
 
 interface CardItemProps {
     user: IUser

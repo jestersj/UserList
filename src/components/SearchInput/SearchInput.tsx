@@ -1,5 +1,5 @@
 import React, {ChangeEvent, FC, useState} from 'react';
-import s from './SearchInput.module.css'
+import s from './SearchInput.module.css';
 
 interface SearchInputProps {
     searchFunc: (val: string) => void

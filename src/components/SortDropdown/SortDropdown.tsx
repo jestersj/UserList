@@ -1,7 +1,7 @@
 import React, {FC, useEffect, useRef, useState} from 'react';
-import s from "./SortDropdown.module.css";
 import {SortsEnum} from "../../types/SortsEnum";
 import {IUser} from "../../types/IUser";
+import s from "./SortDropdown.module.css";
 
 interface SortDropdownProps {
     sort: (type: keyof IUser) => void

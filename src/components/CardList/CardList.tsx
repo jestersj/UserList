@@ -1,7 +1,7 @@
 import React, {FC} from 'react';
 import {IUser} from "../../types/IUser";
 import CardItem from "./CardItem/CardItem";
-import s from './CardList.module.css'
+import s from './CardList.module.css';
 
 interface CardListProps {
     users: IUser[]

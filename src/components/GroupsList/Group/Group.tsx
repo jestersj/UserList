@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import {IUser} from "../../types/IUser";
+import {IUser} from "../../../types/IUser";
 import s from './Group.module.css'
 
 interface GroupProps {

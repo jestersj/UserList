@@ -2,6 +2,7 @@
     border-radius: 7px;
     background: white;
     width: 220px;
+    height: 40px;
     border: 1px solid var(--border-color);
     font-size: 1rem;
     outline: none;

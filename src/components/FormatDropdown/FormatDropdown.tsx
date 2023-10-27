@@ -1,8 +1,8 @@
 import React, {FC, useEffect, useRef, useState} from 'react';
 import {useTypedSelector} from "../../hooks/useTypedSelector";
-import s from './FormatDropdown.module.css'
 import {FormatEnum} from "../../types/FormatEnum";
 import {useDispatch} from "react-redux";
+import s from './FormatDropdown.module.css';
 
 const FormatDropdown: FC = () => {
     const {format} = useTypedSelector(state => state)

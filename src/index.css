@@ -24,6 +24,9 @@
     font-weight: 500;
     src: url("./static/fonts/Montserrat-Medium.ttf") format("truetype");
 }
+html {
+    font-size: 16px;
+}
 * {
     margin: 0;
     padding: 0;
@@ -34,8 +37,64 @@
     margin-left: 3vw;
     margin-right: 3vw;
 }
+.index_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.index_h1 {
+    display: block;
+    width: 50%;
+    margin-top: 40px;
+    text-align: center;
+    color: var(--border-color);
+}
+.index_link {
+    display: inline-block;
+    width: 300px;
+    border: 2px solid var(--border-color);
+    border-radius: 7px;
+    text-align: center;
+    font-weight: 500;
+    color: var(--border-color);
+    text-decoration: none;
+    padding: 10px;
+}
 .sort_row {
     display: flex;
+    align-items: flex-end;
     gap: 40px;
     margin-bottom: 20px;
+}
+.found_cont {
+    margin-bottom: 10px;
+}
+.loading_cont {
+    display: flex;
+    justify-content: center;
+    padding-top: 100px;
+}
+.loading_icon {
+    width: 150px;
+    height: auto;
+    animation: rotation 1.5s infinite;
+}
+@keyframes rotation {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+@media (max-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+    .sort_row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
 }
