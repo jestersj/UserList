@@ -1,13 +1,32 @@
+.input_cont {
+    position: relative;
+    margin-top: 10px;
+}
 .input {
     width: 220px;
     height: 40px;
     outline: none;
     border-radius: 7px;
     border: 1px solid var(--border-color);
-    padding: 10px;
-    margin-top: 10px;
+    padding: 10px 20px 10px 30px;
 }
 .input::placeholder {
     font-style: italic;
     font-size: 1rem;
+}
+.search_icon {
+    position: absolute;
+    width: auto;
+    height: 20px;
+    left: 7px;
+    top: calc(50% - 10px);
+}
+.cross {
+    position: absolute;
+    width: auto;
+    height: 20px;
+    right: 2px;
+    top: calc(50% - 10px);
+    background: none;
+    border: none;
 }
